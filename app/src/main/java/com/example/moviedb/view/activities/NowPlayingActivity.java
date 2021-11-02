@@ -1,4 +1,4 @@
-package com.example.moviedb.view;
+package com.example.moviedb.view.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
@@ -23,8 +23,7 @@ public class NowPlayingActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_now_playing);
-        rv_now_playing = findViewById(R.id.rv_now_playing);
-
+        rv_now_playing = findViewById(R.id.rv_up_coming_fragment);
         view_model = new ViewModelProvider(NowPlayingActivity.this).get(MovieViewModel.class);
         view_model.getNowPlaying();
         view_model.getResultNowPlaying().observe(NowPlayingActivity.this,showNowPlaying);

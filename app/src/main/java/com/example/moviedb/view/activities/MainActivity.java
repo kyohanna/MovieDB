@@ -1,4 +1,4 @@
-package com.example.moviedb.view;
+package com.example.moviedb.view.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
@@ -15,7 +15,6 @@ import com.example.moviedb.R;
 import com.example.moviedb.helper.Const;
 import com.example.moviedb.model.Movies;
 import com.example.moviedb.viewmodel.MovieViewModel;
-import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
 public class MainActivity extends AppCompatActivity {
