@@ -22,7 +22,7 @@ public interface ApiEndPoint {
             @Query("api_key") String apiKey
     );
 
-    @GET("movie/{up_coming}")
+    @GET("movie/{upcoming}")
     Call<UpComing> getUpComing(
             @Query("api_key") String apiKey
     );

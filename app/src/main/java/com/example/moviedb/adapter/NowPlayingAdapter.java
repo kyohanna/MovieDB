@@ -49,12 +49,12 @@ public class NowPlayingAdapter extends RecyclerView.Adapter<NowPlayingAdapter.Ca
         //    holder.cv.setOnClickListener(new View.OnClickListener() {
         //        @Override
         //        public void onClick(View view) {
-  //               Intent intent = new Intent(context, MovieDetailsActivity.class);
-  //               intent.putExtra("movie_id", ""+results.getId());
-  //               context.startActivity(intent);
+        //               Intent intent = new Intent(context, MovieDetailsActivity.class);
+        //               intent.putExtra("movie_id", ""+results.getId());
+        //               context.startActivity(intent);
 
         //           Bundle bundle = new Bundle();
-        //           bundle.putString("moviedId", ""+results.getId());
+        //           bundle.putString("movieId", ""+results.getId());
         //           Navigation.findNavController(view).navigate(R.id.action_nowPlayingFragment_to_movieDetailsFragment, bundle);
         //      }
         //   });
