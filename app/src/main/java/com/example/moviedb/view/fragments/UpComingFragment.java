@@ -72,7 +72,7 @@ public class UpComingFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_up_coming, container, false);
 
-        rv_up_coming_fragment = view.findViewById(R.id.rv_up_coming_fragment);
+        rv_up_coming_fragment = view.findViewById(R.id.rv_now_playing_fragment);
         viewModel = new ViewModelProvider(getActivity()).get(MovieViewModel.class);
         viewModel.getUpComing();
         viewModel.getResultUpComing().observe(getActivity(), showUpComing);

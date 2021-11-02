@@ -76,7 +76,7 @@ public class NowPlayingFragment extends Fragment {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_now_playing, container, false);
 
-        rv_now_playing = view.findViewById(R.id.rv_up_coming_fragment);
+        rv_now_playing = view.findViewById(R.id.rv_now_playing_fragment);
         view_model = new ViewModelProvider(getActivity()).get(MovieViewModel.class);
         view_model.getNowPlaying();
         view_model.getResultNowPlaying().observe(getActivity(),showNowPlaying);
@@ -92,21 +92,21 @@ public class NowPlayingFragment extends Fragment {
             adapter.setListNowPlaying(nowPlaying.getResults());
             rv_now_playing.setAdapter(adapter);
 
-       //     ItemClickSupport.addTo(rv_now_playing).setOnItemLongClickListener(new ItemClickSupport.OnItemLongClickListener() {
-       //         @Override
-        //        public boolean onItemLongClicked(RecyclerView recyclerView, int position, View v) {
-       //             return false;
-       //         }
-       //     });
+//            ItemClickSupport.addTo(rv_now_playing).setOnItemLongClickListener(new ItemClickSupport.OnItemLongClickListener() {
+//                @Override
+//                public boolean onItemLongClicked(RecyclerView recyclerView, int position, View v) {
+//                    return false;
+//                }
+//            });
 
-            ItemClickSupport.addTo(rv_now_playing).setOnItemClickListener(new ItemClickSupport.OnItemClickListener() {
-                @Override
-                public void onItemClicked(RecyclerView recyclerView, int position, View v) {
-                    Bundle bundle = new Bundle();
-                    bundle.putString("movieId", ""+nowPlaying.getResults().get(position).getId());
-                    Navigation.findNavController(v).navigate(R.id.action_nowPlayingFragment_to_movieDetailsFragment, bundle);
-               }
-            });
+//            ItemClickSupport.addTo(rv_now_playing).setOnItemClickListener(new ItemClickSupport.OnItemClickListener() {
+//                @Override
+//                public void onItemClicked(RecyclerView recyclerView, int position, View v) {
+//                    Bundle bundle = new Bundle();
+//                    bundle.putString("movieId", ""+nowPlaying.getResults().get(position).getId());
+//                    Navigation.findNavController(v).navigate(R.id.action_nowPlayingFragment_to_movieDetailsFragment, bundle);
+//               }
+//            });
 
         }
     };
