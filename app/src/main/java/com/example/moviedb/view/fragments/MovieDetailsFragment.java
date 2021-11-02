@@ -87,7 +87,6 @@ public class MovieDetailsFragment extends Fragment {
 
         viewModel.getMovieById(movie_id);
         viewModel.getResultGetMovieById().observe(getActivity(), showResultMovie);
-        String movieId = getArguments().getString("movieID");
 
         return view;
     }

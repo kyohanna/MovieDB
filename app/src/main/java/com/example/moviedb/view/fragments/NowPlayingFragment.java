@@ -92,20 +92,20 @@ public class NowPlayingFragment extends Fragment {
             adapter.setListNowPlaying(nowPlaying.getResults());
             rv_now_playing.setAdapter(adapter);
 
-     //       ItemClickSupport.addTo(rv_now_playing).setOnItemLongClickListener(new ItemClickSupport.OnItemLongClickListener() {
-     //           @Override
-     //           public boolean onItemLongClicked(RecyclerView recyclerView, int position, View v) {
-     //               return false;
-     //           }
-     //       });
+       //     ItemClickSupport.addTo(rv_now_playing).setOnItemLongClickListener(new ItemClickSupport.OnItemLongClickListener() {
+       //         @Override
+        //        public boolean onItemLongClicked(RecyclerView recyclerView, int position, View v) {
+       //             return false;
+       //         }
+       //     });
 
             ItemClickSupport.addTo(rv_now_playing).setOnItemClickListener(new ItemClickSupport.OnItemClickListener() {
                 @Override
                 public void onItemClicked(RecyclerView recyclerView, int position, View v) {
                     Bundle bundle = new Bundle();
-                    bundle.putString("moviedId", ""+nowPlaying.getResults().get(position).getId());
+                    bundle.putString("movieId", ""+nowPlaying.getResults().get(position).getId());
                     Navigation.findNavController(v).navigate(R.id.action_nowPlayingFragment_to_movieDetailsFragment, bundle);
-                }
+               }
             });
 
         }
